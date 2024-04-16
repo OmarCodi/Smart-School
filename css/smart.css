@@ -1,0 +1,383 @@
+body{
+   font-family:  "Open Sans", sans-serif;
+    
+}
+/* navbar  */
+
+.navbar .navbar-nav .nav-link:active, 
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: rgb(255, 51, 0);
+}
+.navbar-logo {
+    max-width: 60px; 
+  }
+  /* compund-title  */
+  .main-title::after {
+    content: "";
+    width: 250px;
+    height: 2px;
+    background-color: burlywood;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+.bg-img{
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  filter: brightness(0.6);
+
+}
+/* landing  */
+.slide-from-left {
+  transform: translateX(-100%);
+  animation: slideFromLeft 2s ease-in-out forwards;
+}
+
+.slide-from-right {
+  transform: translateX(100%);
+  animation: slideFromRight 2s ease-in-out forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.landing {
+
+min-height: calc(100vh - 72px);
+
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+
+
+/* function  */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.features .icon-holder {
+    height: 200px;
+}
+
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.number {
+    font-size: 12rem;
+    color: yellow;
+}
+.icon {
+    color: chartreuse;
+}
+h4 {
+    color: darksalmon;
+}
+
+/* MultiPlatforms  */
+
+/* price  */
+.price {
+  background-color: #0a1c3a;
+}
+
+
+
+.price .title-area {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.price .title-area h1 {
+  font-size: 130px;
+  opacity: .3; /* Adjust the opacity as needed */
+  font-weight: 700;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Adjust the shadow color and intensity */
+  position: absolute;
+  top: -82px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+}
+.price .title-area  h2 {
+font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.price .card {
+  padding: 30px 16px;
+    background-color: #283753;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    transition: 0.3s;
+    z-index: 1;
+    margin: auto;
+}
+
+
+
+.price .card::before,
+.price .card::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  background-color: #3e9133;
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s;
+}
+.price .card::before {
+  left: 0;
+  top: 0;
+}
+.price .card::after {
+  right: 0;
+  bottom: 0;
+}
+.price .card:hover::before,
+.price .card:hover::after {
+  width: 100%;
+}
+
+.price .card.popular .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: rgb(49, 202, 49);
+  color: white;
+  font-weight: bold;
+  padding: 10px 4px 28px 23px;
+  font-size: 15px;
+  right: -9px;
+  width: 31px;
+  top: -26px;
+}
+
+.price .card.popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent #283753;
+  border-width: 20px;
+}
+@media (max-width: 767px) {
+  .price .title-area h1 {
+    font-size: 95px;
+  }
+  .price .card {
+  margin-bottom: 31px;
+  }
+}
+.price .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 28px;
+  background-color: #3C527B;
+  padding: 13px 32px;
+  margin-bottom: 25px;
+}
+.amount {
+  font-size: 30px;
+    font-weight: 600;
+    color: #C1CEE5;
+    margin-bottom: 30px;
+}
+.small-text {
+  font-size: 14px;
+}
+
+.price .card ul {
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: left;
+}
+
+.price .card ul li {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+.price .card-link {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #3C527B;
+  padding: 12px 30px;
+}
+.price .card-link:hover,
+.price .card-link:focus {
+ color: #fff;
+ background-color: #25d366;
+}
+/* Start Subscribe */
+.subscribe {
+    background-color: rgb(102, 255, 0);
+  }
+  .subscribe input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .subscribe input[type="text"]:focus {
+    outline: none;
+  }
+  .subscribe ::placeholder {
+    color: white;
+  }
+  .subscribe input[type="submit"] {
+    background-color: black;
+    color: yellow;
+  }
+  /* End Subscribe */
+  /* Start Footer */
+.footer {
+  background-color: black;
+}
+
+.main-btn {
+  background-color: red;
+  color: yellow;
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  background-color: yellow;
+  color: red;
+  padding: 0.5rem 1rem;
+}
+.footer .copyright > span {
+  color: rgb(241, 255, 47);
+}
+.footer .copyright div span {
+  color: yellow;
+}
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .facebook {
+  background-color: #1877f2;
+}
+.footer .twitter {
+  background-color: #14171a;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+}
+.footer .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
+/* DEmo  */
+.bg-pink-200 {
+  background-color: #f8d9e4; 
+}
+label {
+  font-weight: bolder;
+}
+
+.demo h2::before {
+  content: "";
+  width: 78%;
+  height: 2px;
+  background-color: burlywood;
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Start Testimonials */
+
+
+ .box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  border-radius: 6px;
+  position: relative;
+}
+
+ .box .rate .filled {
+  color: #ffc107;
+}
+/* scrool to top  */
+#btnScrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red */
+  color: white;
+  border: none;
+  border: 50%; /* Make the button round */
+  padding: 15px; /* Increase padding for larger button */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect */
+  z-index: 5;
+}
+
+#btnScrollToTop:hover {
+  background-color: red; /* Change background color on hover */
+}
+/* whatsaap icon  */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25d366; /* WhatsApp green color */
+  color: #fff;
+  border-radius: 50%; /* Make the button round */
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  z-index: 5;
+}
+
