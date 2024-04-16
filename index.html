@@ -24,43 +24,46 @@
     <i class="fab fa-whatsapp"></i> 
   </a>
   
-                      <!-- Navbar Section -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top d-flex ">
+                      <!-- Navbar Section --> 
+  <nav class="navbar navbar-expand-lg bg-transparent sticky-top" data-bs-theme="dark" >
     <div class="container">
-      <a class="navbar-brand " href="#home"><img src="images/Capture d’écran 2024-04-04 184346.png" class=" navbar-logo img-fluid"></a>
+      <a class="navbar-brand fs-4" href="#"><i class="fa-solid fa-globe fa-lg"></i> <span class="text-info">Smart</span>School</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="main">
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0 ">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0 fw-bold fs-5 ">
           <li class="nav-item mx-md-3">
             <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="index.html">ACCUEIL</a>
           </li>
           <li class="nav-item mx-md-3">
-            <a class="nav-link p-2 p-lg-3" href="#function">FONCTIONNALITÉS</a>
+            <a class="nav-link p-2 p-lg-3 active" href="#function">Services</a>
+          </li> 
+          <li class="nav-item mx-md-3">
+            <a class="nav-link p-2 p-lg-3 active" href="#solution">Solution</a>
           </li> 
             <li class="nav-item mx-md-3">
-            <a class="nav-link p-2 p-lg-3" href="#packs">Packs</a>
+            <a class="nav-link p-2 p-lg-3 active" href="#packs">Packs</a>
           </li> 
             <li class="nav-item mx-md-3">
-            <a class="nav-link p-2 p-lg-3" href="contact.html">Contact</a>
+            <a class="nav-link p-2 p-lg-3 active" href="contact.html">Contact</a>
           </li>  
           <li class="nav-item mx-md-3">
-            <a class="nav-link p-2 p-lg-3" href="#about">About</a>
+            <a class="nav-link p-2 p-lg-3 active" href="#about">About</a>
           </li>
         </ul>
         <ul class=" navbar-nav icons-social d-flex flex-row  m-md-auto gap-2">
         <li class="nav-item">
-            <a class="nav-link p-2 p-lg-3" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a class="nav-link p-2 p-lg-3 active" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link p-2 p-lg-3" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="nav-link p-2 p-lg-3 active" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link p-2 p-lg-3" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="nav-link p-2 p-lg-3 active" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link p-2 p-lg-3" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a class="nav-link p-2 p-lg-3 active" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </li>
         </ul>
         
@@ -70,7 +73,7 @@
   <!-- Landing Section -->
 <div class="landing d-flex justify-content-center align-items-center" id="home">
     <div class="text-center" id="landingContent">
-        <h1 class="fw-bolder text-light"><span class="text-danger">Smart</span> School</h1>
+        <h1 class="fw-bolder text-light"><span class="text-info">Smart</span>School</h1>
         <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias aut consectetur numquam</p>
         <a class="btn btn-primary text-uppercase" href="contact.html">Nous contacter</a>
         <a class="btn btn-primary text-uppercase " href="demo.html">See Demo</a>
@@ -524,9 +527,11 @@
   window.addEventListener('scroll',function(){
             if(window.pageYOffset>100){
               nav.classList.add('bg-dark','shadow');
+              nav.classList.remove('bg-transparent','shadow');
           
             }
             else{
+              nav.classList.add('bg-transparent','shadow');
               nav.classList.remove('bg-dark','shadow');
               
             }

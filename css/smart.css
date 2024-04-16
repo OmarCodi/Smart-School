@@ -7,7 +7,7 @@ body{
 .navbar .navbar-nav .nav-link:active, 
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover{
-    color: rgb(255, 51, 0);
+    color: #33C4FF;
 }
 .navbar-logo {
     max-width: 60px; 
@@ -67,6 +67,12 @@ body{
 
 min-height: calc(100vh - 72px);
 
+}
+
+.landing .btn:hover,
+.landing .btn:focus {
+  background-color: #25d366;
+  color: white;
 }
 
 h1{
