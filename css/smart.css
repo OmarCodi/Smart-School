@@ -1,6 +1,11 @@
 body{
-   font-family:  "Open Sans", sans-serif;
-    
+   overflow-x: hidden;
+  
+}
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /* navbar  */
 
@@ -12,6 +17,10 @@ body{
 .navbar-logo {
     max-width: 60px; 
   }
+h1{
+    text-transform: uppercase;
+}
+
   /* compund-title  */
   .main-title::after {
     content: "";
@@ -23,9 +32,17 @@ body{
     left: 50%;
     transform: translateX(-50%);  
 }
+
+.deco {
+  margin: 14px auto;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+}
 .bg-img{
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -65,23 +82,39 @@ body{
 
 .landing {
 
-min-height: calc(100vh - 72px);
+min-height: calc(100vh - 78px);
 
 }
+@media (max-width: 767px) {
+  .landing {
+
+    min-height: 100vh ;
+    
+    }
+
+}
+
+
 
 .landing .btn:hover,
 .landing .btn:focus {
-  background-color: #25d366;
-  color: white;
+  background-color: white;
+  color: #33C4FF;
 }
 
-h1{
-    text-transform: uppercase;
-}
+
 
 
 
 /* function  */
+.features  {
+  background-color: #0a1c3a;
+}
+
+.cage {
+  border: 2px white solid;
+
+}
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(50px);
@@ -113,7 +146,29 @@ h4 {
     color: darksalmon;
 }
 
-/* MultiPlatforms  */
+/* Interface  */
+.view {
+  background-color: #0a1c3a;
+}
+/* MultiPlatform  */
+.multi {
+  background-color: white;
+}
+
+.multi .main-title h2:hover {
+  background-color: #33C4FF ;
+  color: white;
+  cursor: pointer;
+}
+/* AVis  */
+.avis {
+  background-color: white;
+}
+.avis .main-title h2:hover {
+  background-color: #33C4FF ;
+  color: white;
+  cursor: pointer;
+}
 
 /* price  */
 .price {
@@ -122,27 +177,22 @@ h4 {
 
 
 
-.price .title-area {
-  text-align: center;
-  margin-bottom: 70px;
-  position: relative;
-  z-index: 1;
-}
 
-
-.price .title-area h1 {
-  font-size: 130px;
-  opacity: .3; /* Adjust the opacity as needed */
+.shadowww {
+  font-size: 85px;
+  opacity: 1.3;
   font-weight: 700;
-  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Adjust the shadow color and intensity */
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: -82px;
+  top: -110px;
   left: 0;
   right: 0;
   margin: auto;
-  z-index: -1;
+  z-index: 0;
+  overflow: hidden;
 }
-.price .title-area  h2 {
+
+.title-shadowww{
 font-size: 45px;
     font-weight: 600;
     color: #fff;
@@ -209,11 +259,13 @@ font-size: 45px;
   border-width: 20px;
 }
 @media (max-width: 767px) {
-  .price .title-area h1 {
-    font-size: 95px;
-  }
+  
   .price .card {
   margin-bottom: 31px;
+  }
+  .shadowww {
+    font-size: 60px;
+    top: -100px;
   }
 }
 .price .card-title {
@@ -262,22 +314,28 @@ text-align: left;
 }
 /* Start Subscribe */
 .subscribe {
-    background-color: rgb(102, 255, 0);
+    background-color: white;
   }
   .subscribe input[type="text"] {
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
+    color: black;
   }
   .subscribe input[type="text"]:focus {
     outline: none;
   }
   .subscribe ::placeholder {
-    color: white;
+    color: black;
   }
   .subscribe input[type="submit"] {
-    background-color: black;
-    color: yellow;
+    background-color: rgb(13 202 240);
+    color:white;
   }
+  .subscribe input[type="submit"]:hover {
+    background-color: white;
+    color:rgb(13 202 240);
+  }
+  
   /* End Subscribe */
   /* Start Footer */
 .footer {
@@ -285,20 +343,20 @@ text-align: left;
 }
 
 .main-btn {
-  background-color: red;
-  color: yellow;
+  background-color: rgb(13 202 240);
+  color: white;
   padding: 0.5rem 1rem;
 }
 .main-btn:hover {
-  background-color: yellow;
-  color: red;
+  background-color: white;
+  color: rgb(13 202 240);
   padding: 0.5rem 1rem;
 }
 .footer .copyright > span {
-  color: rgb(241, 255, 47);
+  color: rgb(13 202 240);
 }
 .footer .copyright div span {
-  color: yellow;
+  color: rgb(13 202 240);
 }
 .footer .contact ul svg {
   width: 20px;
@@ -355,7 +413,7 @@ label {
   bottom: 20px;
   right: 20px;
   display: none;
-  background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red */
+  background-color: rgb(13 202 240); /* Semi-transparent red */
   color: white;
   border: none;
   border: 50%; /* Make the button round */
@@ -367,7 +425,8 @@ label {
 }
 
 #btnScrollToTop:hover {
-  background-color: red; /* Change background color on hover */
+  background-color: white; /* Change background color on hover */
+  color: rgb(13 202 240);
 }
 /* whatsaap icon  */
 .whatsapp-icon {

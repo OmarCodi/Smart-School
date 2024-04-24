@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/smart.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
   <!-- background image  -->
-  <img class="bg-img" src="images/imagination-8159927_960_720.png" alt="">
+  <img class="bg-img" src="images/bg.jpg" alt="">
   <!-- scrool Button  -->
   <button onclick="scrollToTop()" id="btnScrollToTop" class="btn btn-primary">
     <i class="fas fa-arrow-up"></i> <!-- Arrow icon -->
@@ -25,8 +25,8 @@
   </a>
   
                       <!-- Navbar Section --> 
-  <nav class="navbar navbar-expand-lg bg-transparent sticky-top" data-bs-theme="dark" >
-    <div class="container">
+  <nav class="navbar navbar-expand-lg bg-transparent fixed-top sticky-lg-top" data-bs-theme="dark" >
+    <div class="container ">
       <a class="navbar-brand fs-4" href="#"><i class="fa-solid fa-globe fa-lg"></i> <span class="text-info">Smart</span>School</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
@@ -74,61 +74,102 @@
 <div class="landing d-flex justify-content-center align-items-center" id="home">
     <div class="text-center" id="landingContent">
         <h1 class="fw-bolder text-light"><span class="text-info">Smart</span>School</h1>
-        <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias aut consectetur numquam</p>
+            <p class="text-light fw-bold fs-3">Centralisez la gestion de tous les aspects de votre école sur une plateforme unique : simplifiez, organisez, et optimisez votre quotidien scolaire avec facilité.</p>
         <a class="btn btn-primary text-uppercase" href="contact.html">Nous contacter</a>
-        <a class="btn btn-primary text-uppercase " href="demo.html">See Demo</a>
+        <a class="btn btn-primary text-uppercase " href="demo.html">Demo Gratuit</a>
     </div>
 </div>
 <!-- Functions Section  -->
 <div class="features text-center pt-5 pb-5" id="function">
     <div class="container">
-        <div class="main-title mt-5 mb-5 position-relative ">
-            <i class=" mb-4 fa-solid fa-school"></i>
-            <h2 class="text-uppercase">What we DO ?</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut</p>
+        <div class="main-title mt-3 mb-5 position-relative ">
+            <h1 class="shadowww">FUnctions</h1>
+            <h2 class="text-uppercase title-shadowww">What we DO ?</h2>
+            <p class="text-success fw-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut</p>
         </div>
         <div class="row ">
-            <div class="col-md-6 col-lg-4 animate-on-scroll">
+            <div class="col-md-6 col-lg-4 animate-on-scroll cage">
                 <div class="feat">
                     <div class="icon-holder position-relative">
                         <i class="fa-solid fa-1 position-absolute bottom-0 number"></i>
                         <i class="fa-solid fa-user-tie fa-4x position-absolute bottom-0 icon"></i>
                     </div>
                     <h4 class="mb-3 mt-3 text-uppercase">Gestion adminsitration</h4>
-                    <p class="text-black-50 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa animi hic vitae qui commodi vero veritatis autem ea atque enim omnis delectus repudiandae eos perspiciatis, repellendus perferendis aliquid nesciunt.</p>
+                    <p class="text-info lh-lg ">Toutes les activités et processus impliqués dans la supervision, la coordination et la direction des opérations d'une organisation ou d'une entreprise.
+                       Cela comprend la planification stratégique, la gestion des ressources humaines, la gestion financière, la gestion des installations, la conformité réglementaire, 
+                       la gestion des technologies de l'information,la gestion des risques, la communication interne et externe, ainsi que la prise de décision globale pour atteindre les objectifs organisationnels.</p>
                 </div>
             </div>  
-                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                <div class="col-md-6 col-lg-4 animate-on-scroll cage">
                 <div class="feat">
                     <div class="icon-holder position-relative">
                         <i class="fa-solid fa-2 position-absolute bottom-0 number"></i>
                         <i class="fa-solid fa-graduation-cap fa-4x position-absolute bottom-0 icon"></i>
                     </div>
                     <h4 class="mb-3 mt-3 text-uppercase">Gestion Etudiant</h4>
-                    <p class="text-black-50 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa animi hic vitae qui commodi vero veritatis autem ea atque enim omnis delectus repudiandae eos perspiciatis, repellendus perferendis aliquid nesciunt.</p>
+                    <p class="text-info lh-lg">Administrer les données et les activités liées aux étudiants au sein d'une institution éducative. 
+                      Cela inclut la gestion des inscriptions, des dossiers académiques, des horaires de cours, des notes, des absences, des informations personnelles, 
+                      ainsi que la communication avec les étudiants et leurs familles. 
+                      Une gestion efficace des étudiants vise à assurer un suivi précis de leur parcours académique et à faciliter leur expérience d'apprentissage tout au long de leur scolarité.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 animate-on-scroll">
+            <div class="col-md-6 col-lg-4 animate-on-scroll cage">
                 <div class="feat">
                     <div class="icon-holder position-relative">
                         <i class="fa-solid fa-3 position-absolute bottom-0 number"></i>
                         <i class="fa-solid fa-dollar-sign fa-4x position-absolute bottom-0 icon"></i>
                     </div>
                     <h4 class="mb-3 mt-3 text-uppercase">Gestion Paiments</h4>
-                    <p class="text-black-50 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora culpa animi hic vitae qui commodi vero veritatis autem ea atque enim omnis delectus repudiandae eos perspiciatis, repellendus perferendis aliquid nesciunt.</p>
+                    <p class="text-info lh-lg">Consiste à administrer et superviser les transactions financières liées aux frais de scolarité,
+                       aux frais supplémentaires, aux dons, etc., à travers un système en ligne centralisé. Cela inclut la collecte
+                      , le suivi et la gestion des paiements des élèves et de leurs familles, ainsi que la génération de rapports et la gestion des données financières.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Interface -->
-<div class="view text-center pt-5 pb-5 bg-primary-subtle" id="view">
+
+<!-- Multplatform  -->
+
+<div class="multi text-center pt-5 pb-5 bg-Light" id="multi">
   <div class="container ">
       <div class="main-title mt-3 mb-5 position-relative ">
-        <i class="fa-solid fa-tv"></i>
-          <h2 class="text-uppercase">interface</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut</p>
+        <i class="fa-solid fa-laptop text-info fs-3"></i>
+          <h2 class="text-uppercase deco">Multiplateforme</h2>
+          <p>VOUS POUVEZ Y ACCÉDER DEPUIS N'IMPORTE QUEL APPAREIL</p>
+      </div>
+      <div class="row align-items-center " >
+        <div class="col-lg-8 order-lg-last mb-3 mb-lg-0 animate-on-scroll" >
+          <div class="image">
+            <img class="img-fluid" src="images/MyScol-Photoshop-2-2048x1182.png.webp" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4 text-center text-md-start order-lg-first animate-on-scroll" >
+          <div class="text">
+            <h2>Connectez-vous en un clic depuis n'importe quel appareil !</h2>
+            <p class="text-black-50 fs-6">
+              Smart School est une solution multiplateforme,
+                elle est adaptée pour ordinateurs, tablettes ainsi que vos téléphones portable, 
+                une application Smart School est disponible sur iOS et Android.
+                Restez connectés avec Smart School où que vous soyez et profitez de la gestion de votre établissement à portée de main.
+            </p>
+            <a class="btn rounded-pill main-btn text-uppercase" href="#price">Order Me One</a>
+            <a class="btn rounded-pill main-btn text-uppercase" href="demo.html">Free DEmo</a>
+          </div>
+        </div>
+      
+      </div>
+  </div>
+</div>
+<!-- Interface -->
+<div class="view text-center pt-5 pb-5 " id="view">
+  <div class="container ">
+      <div class="main-title mt-3 mb-5 position-relative ">
+        <h1 class="shadowww">Interface</h1>
+          <h2 class="text-uppercase title-shadowww">VIEW</h2>
+          <p class="text-success fw-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut</p>
       </div>
       <div id="carouselExampleIndicators" class="carousel slide animate__animated animate__fadeInRight">
         <div class="carousel-indicators">
@@ -159,45 +200,14 @@
   </div>
 </div>
 
-<!-- Multplatform  -->
 
-<div class="multi text-center pt-5 pb-5 bg-Light" id="multi">
-  <div class="container ">
-      <div class="main-title mt-3 mb-5 position-relative ">
-        <i class="fa-solid fa-laptop"></i>
-          <h2 class="text-uppercase">Multiplateforme</h2>
-          <p>VOUS POUVEZ Y ACCÉDER DEPUIS N'IMPORTE QUEL APPAREIL</p>
-      </div>
-      <div class="row align-items-center " >
-        <div class="col-lg-8 order-lg-last mb-3 mb-lg-0 animate-on-scroll" >
-          <div class="image">
-            <img class="img-fluid" src="images/MyScol-Photoshop-2-2048x1182.png.webp" alt="" />
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4 text-center text-md-start order-lg-first animate-on-scroll" >
-          <div class="text">
-            <h2>Connectez-vous en un clic depuis n'importe quel appareil !</h2>
-            <p class="text-black-50 fs-6">
-              Smart School est une solution multiplateforme,
-                elle est adaptée pour ordinateurs, tablettes ainsi que vos téléphones portable, 
-                une application Smart School est disponible sur iOS et Android.
-                Restez connectés avec Smart School où que vous soyez et profitez de la gestion de votre établissement à portée de main.
-            </p>
-            <a class="btn rounded-pill main-btn text-uppercase" href="#">Order Me One</a>
-            <a class="btn rounded-pill main-btn text-uppercase" href="#">Free DEmo</a>
-          </div>
-        </div>
-      
-      </div>
-  </div>
-</div>
 <!-- Avis Clients  -->
 
-<div class="avis text-center pt-5 pb-5 bg-info" id="avis">
+<div class="avis text-center pt-5 pb-5 " id="avis">
   <div class="container ">
       <div class="main-title mt-3 mb-5 position-relative ">
-        <i class="fa-solid fa-reply"></i>
-          <h2 class="text-uppercase">Avis Clients</h2>
+        <i class="fa-solid fa-reply text-info fs-3"></i>
+          <h2 class="text-uppercase deco">Avis Clients</h2>
           <p>NOS CLIENTS SONT SATISFAITS, ET ILS NOUS FONT SAVOIR !</p>
       </div>
 
@@ -206,7 +216,7 @@
             <div class="card">
               <div class="box row g-0">
                 <div class="col-md-4">
-                  <img src="images/avatar-01.png" class="img-fluid rounded-start" alt="...">
+                  <img src="images/team-1.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -227,7 +237,7 @@
             <div class="card">
               <div class="box row g-0">
                 <div class="col-md-4">
-                  <img src="images/avatar-02.png" class="img-fluid rounded-start" alt="...">
+                  <img src="images/team-3.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -247,11 +257,11 @@
             <div class="card">
               <div class="box row g-0">
                 <div class="col-md-4">
-                  <img src="images/avatar-03.png" class="img-fluid rounded-start" alt="...">
+                  <img src="images/team-4.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="title card-title">Hatim Louzi</h5>
+                    <h5 class="title card-title">Hanaa Louzi</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="rate card-text"><small class="text-body-secondary">  <i class="filled fas fa-star"></i>
                       <i class="filled fas fa-star"></i>
@@ -271,7 +281,7 @@
             <div class="card">
               <div class="box row g-0">
                 <div class="col-md-4">
-                  <img src="images/avatar-04.png" class="img-fluid rounded-start" alt="...">
+                  <img src="images/avatar-05.png" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -292,11 +302,11 @@
             <div class="card">
               <div class="box row g-0">
                 <div class="col-md-4">
-                  <img src="images/avatar-05.png" class="img-fluid rounded-start" alt="...">
+                  <img src="images/woman-657753_640.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="title card-title">Adam Fatih</h5>
+                    <h5 class="title card-title">Sara Fatih</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="rate card-text"><small class="text-body-secondary">   <i class="filled fas fa-star"></i>
                       <i class="filled fas fa-star"></i>
@@ -312,7 +322,7 @@
             <div class="card">
               <div class="box row g-0">
                 <div class="col-md-4">
-                  <img src="images/avatar-06.png" class="img-fluid rounded-start" alt="...">
+                  <img src="images/man-3803551_960_720.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body text-center">
@@ -342,11 +352,10 @@
 <div class="price text-center pt-5 pb-5 " id="price">
   <div class="container ">
       <div class="main-title mt-3 mb-5 position-relative ">
-        <i class="fa-solid fa-hand-holding-dollar"></i>
         <div class="title-area justify-content-center text-center ">
-        <h1>pricing</h1>
-          <h2 class="text-uppercase">Pricing</h2>
-          <p class="text-success">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut</p>
+        <h1 class="shadowww ">pricing</h1>
+          <h2 class="text-uppercase title-shadowww">prix packs</h2>
+          <p class="text-success fw-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ut</p>
       </div>
     </div>
       <div class="cards-hold d-flex justify-content-center row mb-4 gx-md-3" id="packs">
@@ -435,7 +444,7 @@
         <div class="fw-bold fs-5 mb-3">Subscribe to our Newsletter:</div>
       </div>
       <div class="col-md-6 col-lg-7 mb-3">
-        <input class="w-100 text-light p-2 bg-transparent" type="text" placeholder="Enter Email Address" />
+        <input class="w-100 p-2 " type="text" placeholder="Enter Email Address" />
       </div>
       <div class="col-md-6 col-lg-2">
         <input class="btn rounded-pill" type="submit" value="Subscribe" />
@@ -518,7 +527,7 @@
   </div>
 </div>
 </div>
-<p class="copyright bg-dark text-danger d-flex justify-content-center align-items-center mb-0 p-3">
+<p class="copyright bg-dark text-info d-flex justify-content-center align-items-center mb-0 p-3">
   © 2024 LilianaDev. All rights reserved
 </p>
 </div>
