@@ -1,272 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Smart School</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/smart.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart School</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/smart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- scrool Button  -->
     <button onclick="scrollToTop()" id="btnScrollToTop" class="btn btn-primary">
-      <i class="fas fa-arrow-up"></i> <!-- Arrow icon -->
+      <i class="fas fa-arrow-up"></i>
+      <!-- Arrow icon -->
     </button>
     <!-- Whatsapp Button  -->
-    <a href="https://api.whatsapp.com/send?phone=212632001896" target="_blank" class="whatsapp-icon">
-      <i class="fab fa-whatsapp"></i> 
+    <a
+      href="https://api.whatsapp.com/send?phone=212632001896"
+      target="_blank"
+      class="whatsapp-icon"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
-                        <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg sticky-top d-flex bg-pink-200 ">
-        <div class="container">
-          <a class="navbar-brand fs-4" href="#"><i class="fa-solid fa-globe fa-lg"></i> <span class="text-info">Smart</span>School</a>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fa-solid fa-bars"></i>
-                          </button>
-                          <div class="collapse navbar-collapse" id="main">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                              <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="index.html">ACCUEIL</a>
-                              </li>
-                                <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="contact.html">Contact</a>
-                              </li>  <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="#about">About</a>
-                              </li>
-                            </li>  
-                            <div class="icons-social d-flex gap-2">
-                              <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link p-2 p-lg-3" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                </li>
-                          </div> 
-                            </ul>
-                          
-                          </div>
-        </div>
-    </nav>
-                <!-- demo  -->
-    <div class="demo  text-center text-md-start pt-5 pb-5 bg-pink-200 " >
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg sticky-top d-flex bg-pink-200">
       <div class="container">
-          <div class="title mt-5 mb-5 position-relative ">
-            
-              <h2 class=" text-uppercase text-info">Planifier une Démonstration</h2>
-              <div class="text d-flex gap-2 text-secondary-emphasis">
-                <i class="fa-solid fa-hourglass-half mt-1 text-info "></i>
-              <p>Séance de 30 min</p> 
-              <p class="ms-3"><span class="text-danger">*</span> La démo se fera sur Google Meet.</p>
+        <a class="navbar-brand fs-4" href="#"
+          ><i class="fa-solid fa-globe fa-lg"></i>
+          <span class="text-info">Smart</span>School</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="main">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link p-2 p-lg-3 active"
+                aria-current="page"
+                href="index.html"
+                >ACCUEIL</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2 p-lg-3" href="#about">About</a>
+            </li>
+            <div class="icons-social d-flex gap-2">
+              <li class="nav-item">
+                <a
+                  class="nav-link p-2 p-lg-3"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link p-2 p-lg-3"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link p-2 p-lg-3"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link p-2 p-lg-3"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
             </div>
-          </div>
-          <form class="row g-5">
-            <div class="col-md-12">
-              <label for="nomprenom" class="form-label">Nom et Prénom   <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="nomprenom" placeholder="Entrer votre nom et prénom">
-            </div>
-              <div class="col-12 col-md-6">
-              <label for="email" class="form-label">Email   <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="email" placeholder="Entrer votre email">
-            </div>
-            
-            <div class="col-12 col-md-6">
-              <label for="tel" class="form-label">Telephone   <span class="text-danger">*</span></label>
-              <input type="tel" class="form-control" id="tel" placeholder="062512...">
-            </div>
-            
-          <div class="col-12 col-md-6">
-              <label for="entreprise" class="form-label">Nom de l'entreprise / Établissement   <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="entreprise" placeholder="Entre le nom de votre entreprise/établissement">
-            </div>
-            
-            <div class="col-12 col-md-6">
-              <label for="Ville" class="form-label">Ville   <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" id="Ville" placeholder="Entre Votre Ville">
-            </div>
-            
-           <div class="col-12 col-md-6">
-              <label for="date" class="form-label">Choisissez la date   <span class="text-danger">*</span></label>
-              <input type="date" class="form-control" id="date">
-            </div>
-            
-            <div class="col-12 col-md-6">
-              <label for="time" class="form-label">Choisissez l'heure</label>
-              <input type="time" class="form-control" id="time" >
-            </div>
-            <div class="col-12">
-              <label for="exampleFormControlTextarea1" class="form-label">Veuillez partager tout ce qui pourra être utile à la préparation de notre réunion.</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <div class="d-grid">
-              <button class="btn btn-primary" type="button">Réserver maintenant</button>
-            </div>
-          </form>
-
+          </ul>
+        </div>
       </div>
+    </nav>
+    <!-- demo  -->
+    <div class="demo text-center text-md-start pt-5 pb-5 bg-pink-200">
+      <div class="container">
+        <div class="title mt-5 mb-5 position-relative">
+          <h2 class="text-uppercase text-info">Planifier une Démonstration</h2>
+          <div class="text d-flex gap-2 text-secondary-emphasis">
+            <i class="fa-solid fa-hourglass-half mt-1 text-info"></i>
+            <p>Séance de 30 min</p>
+            <p class="ms-3">
+              <span class="text-danger">*</span> La démo se fera sur Google
+              Meet.
+            </p>
+          </div>
+        </div>
+        <form class="row g-5">
+          <div class="col-md-12">
+            <label for="nomprenom" class="form-label"
+              >Nom et Prénom <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nomprenom"
+              placeholder="Entrer votre nom et prénom"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="email" class="form-label"
+              >Email <span class="text-danger">*</span></label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Entrer votre email"
+            />
+          </div>
 
+          <div class="col-12 col-md-6">
+            <label for="tel" class="form-label"
+              >Telephone <span class="text-danger">*</span></label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="tel"
+              placeholder="062512..."
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="entreprise" class="form-label"
+              >Nom de l'entreprise / Établissement
+              <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="entreprise"
+              placeholder="Entre le nom de votre entreprise/établissement"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="Ville" class="form-label"
+              >Ville <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="Ville"
+              placeholder="Entre Votre Ville"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="date" class="form-label"
+              >Choisissez la date <span class="text-danger">*</span></label
+            >
+            <input type="date" class="form-control" id="date" />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="time" class="form-label">Choisissez l'heure</label>
+            <input type="time" class="form-control" id="time" />
+          </div>
+          <div class="col-12">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Veuillez partager tout ce qui pourra être utile à la préparation
+              de notre réunion.</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-primary" type="button">
+              Réserver maintenant
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
     <!-- footer  -->
     <div
-    class="footer pt-5 pb-5 text-white-50 text-center text-md-start"
-    id="about"
-  >
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
-          <div class="info mb-5">
-            <img
-              src="images/Capture d’écran 2024-04-04 184346.png"
-              alt=""
-              class="mb-4 img-fluid w-50"
-            />
-            <p class="mb-5">
-              Pellentesque in ipsum id orci porta dapibus. Vivamus magna
-              justo, lacinia eget consectetur sed, convallis at tellus.
-            </p>
-            <div class="copyright">
-              Created By <span class="text-uppercase">online institut</span>
-              <div>&copy; 2024 - <span>LILIANADEV Inc</span></div>
+      class="footer pt-5 pb-5 text-white-50 text-center text-md-start"
+      id="about"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="info mb-5">
+              <img
+                src="images/Capture d’écran 2024-04-04 184346.png"
+                alt=""
+                class="mb-4 img-fluid w-50"
+              />
+              <p class="mb-5">
+                Pellentesque in ipsum id orci porta dapibus. Vivamus magna
+                justo, lacinia eget consectetur sed, convallis at tellus.
+              </p>
+              <div class="copyright">
+                Created By <span class="text-uppercase">online institut</span>
+                <div>&copy; 2024 - <span>LILIANADEV Inc</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="links">
+              <h5 class="text-light">Links</h5>
+              <ul class="list-unstyled lh-lg">
+                <li>ACCUEIL</li>
+                <li>FONCTIONNALITÉS</li>
+                <li>SERVICES</li>
+                <li>Demo</li>
+                <li>Support</li>
+                <li>Terms and Condition</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="about">
+              <h5 class="text-light">About Us</h5>
+              <ul class="list-unstyled lh-lg">
+                <li>Sign In</li>
+                <li>Register</li>
+                <li>About Us</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+            <h2 class="custom-h2 text-info" style="margin-top: 182px">
+              Location <i class="fa-solid fa-map-pin"></i>
+            </h2>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="row">
+              <div class="col-md-6 col-lg-12 order-md-last">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3297.5052972735893!2d-6.621788124274563!3d34.26116487307906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDE1JzQwLjIiTiA2wrAzNycwOS4yIlc!5e0!3m2!1sfr!2sma!4v1714088739372!5m2!1sfr!2sma"
+                  width="100%"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="col-md-6 col-lg-12">
+                <div class="contact">
+                  <h5 class="text-light">Contact Us</h5>
+                  <p class="lh-lg mt-3 mb-5">
+                    Get in touch with us via mail phone.We are waiting for your
+                    call or message
+                  </p>
+                  <a class="btn rounded-pill main-btn w-100" href="#"
+                    >onlineinstitut23@gmail.com</a
+                  >
+                  <ul
+                    class="d-flex justify-content-center justify-content-md-start mt-5 list-unstyled gap-3"
+                  >
+                    <li>
+                      <a
+                        class="d-block text-light"
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        ><i
+                          class="fa-brands fa-facebook fa-lg facebook rounded-circle p-2"
+                        ></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="d-block text-light"
+                        href="https://twitter.com/"
+                        target="_blank"
+                        ><i
+                          class="fa-brands fa-x-twitter fa-lg twitter rounded-circle p-2"
+                        ></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="d-block text-light"
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        ><i
+                          class="fa-brands fa-linkedin fa-lg linkedin rounded-circle p-2"
+                        ></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        class="d-block text-light"
+                        href="https://www.youtube.com/"
+                        target="_blank"
+                        ><i
+                          class="fa-brands fa-youtube fa-lg youtube rounded-circle p-2"
+                        ></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-2">
-          <div class="links">
-            <h5 class="text-light">Links</h5>
-            <ul class="list-unstyled lh-lg">
-              <li>ACCUEIL</li>
-              <li>FONCTIONNALITÉS</li>
-              <li>SERVICES</li>
-              <li>Demo</li>
-              <li>Support</li>
-              <li>Terms and Condition</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2">
-          <div class="about">
-            <h5 class="text-light">About Us</h5>
-            <ul class="list-unstyled lh-lg">
-              <li>Sign In</li>
-              <li>Register</li>
-              <li>About Us</li>
-              <li>Blog</li>
-              <li>Contact Us</li>
-            </ul>
-          </div >
-          <h2 class=" custom-h2 text-info " style="margin-top: 182px;">Location <i class="fa-solid fa-map-pin"></i></h2> 
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="row">
-            <div class="col-md-6 col-lg-12 order-md-last">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3297.5052972735893!2d-6.621788124274563!3d34.26116487307906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDE1JzQwLjIiTiA2wrAzNycwOS4yIlc!5e0!3m2!1sfr!2sma!4v1714088739372!5m2!1sfr!2sma" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-            <div class="col-md-6 col-lg-12">
-          <div class="contact">
-            <h5 class="text-light">Contact Us</h5>
-            <p class="lh-lg mt-3 mb-5">
-              Get in touch with us via mail phone.We are waiting for your call
-              or message
-            </p>
-            <a class="btn rounded-pill main-btn w-100" href="#"
-              >onlineinstitut23@gmail.com</a
-            >
-            <ul
-              class="d-flex justify-content-center justify-content-md-start mt-5 list-unstyled gap-3"
-            >
-              <li>
-                <a
-                  class="d-block text-light"
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  ><i
-                    class="fa-brands fa-facebook fa-lg facebook rounded-circle p-2"
-                  ></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="d-block text-light"
-                  href="https://twitter.com/"
-                  target="_blank"
-                  ><i
-                    class="fa-brands fa-x-twitter fa-lg twitter rounded-circle p-2"
-                  ></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="d-block text-light"
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  ><i
-                    class="fa-brands fa-linkedin fa-lg linkedin rounded-circle p-2"
-                  ></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="d-block text-light"
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  ><i
-                    class="fa-brands fa-youtube fa-lg youtube rounded-circle p-2"
-                  ></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        </div>
-        </div>
-
       </div>
     </div>
-  </div>
-  <p
-    class="copyright bg-pink-200 text-info fw-bold d-flex justify-content-center align-items-center mb-0 p-3"
-  >
-    © 2024 LilianaDev. All rights reserved
-  </p>
-<script>
-  var nav=document.querySelector("nav");
-  window.addEventListener('scroll',function(){
-            if(window.pageYOffset>100){
-              nav.classList.add('bg-light','shadow');
-          
-            }
-            else{
-              nav.classList.remove('bg-light','shadow');
-              
-            }
-  });
-  function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' // Smooth scrolling animation
-  });
-}
-window.onscroll = function() {scrollFunction()};
+    <p
+      class="copyright bg-pink-200 text-info fw-bold d-flex justify-content-center align-items-center mb-0 p-3"
+    >
+      © 2024 LilianaDev. All rights reserved
+    </p>
+    <script>
+      var nav = document.querySelector("nav");
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("bg-light", "shadow");
+        } else {
+          nav.classList.remove("bg-light", "shadow");
+        }
+      });
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // Smooth scrolling animation
+        });
+      }
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("btnScrollToTop").style.display = "block";
-  } else {
-    document.getElementById("btnScrollToTop").style.display = "none";
-  }
-}
-</script>
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("btnScrollToTop").style.display = "block";
+        } else {
+          document.getElementById("btnScrollToTop").style.display = "none";
+        }
+      }
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/all.min.js"></script>
-</body>
+    <script src="js/all.min.js"></script>
+  </body>
 </html>
