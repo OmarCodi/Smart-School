@@ -26,7 +26,7 @@ h1{
     content: "";
     width: 250px;
     height: 2px;
-    background-color: burlywood;
+    background-color: #33C4FF;
     position: absolute;
     bottom: -20px;
     left: 50%;
@@ -48,7 +48,7 @@ h1{
   z-index: -1;
   position: absolute;
   object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.5);
 
 }
 /* landing  */
@@ -137,10 +137,10 @@ min-height: calc(100vh - 78px);
 }
 .number {
     font-size: 12rem;
-    color: yellow;
+    color: white;
 }
 .icon {
-    color: chartreuse;
+    color: #33C4FF;
 }
 h4 {
     color: darksalmon;
@@ -374,6 +374,19 @@ text-align: left;
 .footer .youtube {
   background-color: #ff0000;
 }
+
+@media (max-width: 767.98px) {
+  .custom-h2 {
+    position: static !important; /* Reset position */
+    margin-top: 0 !important; /* Reset margin-top */
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 767.98px) {
+.contact h5 {
+  margin-top: 15px;
+}
+}
 /* End Footer */
 /* DEmo  */
 .bg-pink-200 {
@@ -387,7 +400,7 @@ label {
   content: "";
   width: 78%;
   height: 2px;
-  background-color: burlywood;
+  background-color: #33C4FF;
   position: absolute;
   top: -46px;
   left: 50%;
