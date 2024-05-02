@@ -29,7 +29,7 @@
       <i class="fab fa-whatsapp"></i>
     </a>
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg sticky-top d-flex bg-pink-200">
+    <nav class="navbar navbar-expand-lg sticky-top d-flex bg-dark" data-bs-theme="dark">
       <div class="container">
         <a class="navbar-brand fs-4" href="#"
           ><i class="fa-solid fa-globe fa-lg"></i>
@@ -57,15 +57,15 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3" href="contact.html">Contact</a>
+              <a class="nav-link p-2 p-lg-3 active" href="contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link p-2 p-lg-3" href="#about">About</a>
+              <a class="nav-link p-2 p-lg-3 active" href="#about">About</a>
             </li>
             <div class="icons-social d-flex gap-2">
               <li class="nav-item">
                 <a
-                  class="nav-link p-2 p-lg-3"
+                  class="nav-link p-2 p-lg-3 active"
                   href="https://www.linkedin.com/"
                   target="_blank"
                   ><i class="fa-brands fa-linkedin-in"></i
@@ -73,7 +73,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link p-2 p-lg-3"
+                  class="nav-link p-2 p-lg-3 active"
                   href="https://twitter.com/"
                   target="_blank"
                   ><i class="fa-brands fa-x-twitter"></i
@@ -81,7 +81,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link p-2 p-lg-3"
+                  class="nav-link p-2 p-lg-3 active"
                   href="https://www.facebook.com/"
                   target="_blank"
                   ><i class="fa-brands fa-facebook-f"></i
@@ -89,7 +89,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link p-2 p-lg-3"
+                  class="nav-link p-2 p-lg-3 active"
                   href="https://www.instagram.com/"
                   target="_blank"
                   ><i class="fa-brands fa-instagram"></i
@@ -101,7 +101,7 @@
       </div>
     </nav>
     <!-- demo  -->
-    <div class="demo text-center text-md-start pt-5 pb-5 bg-pink-200">
+    <div class="demo text-center text-md-start pt-5 pb-5 bg-info bg-opacity-25">
       <div class="container">
         <div class="title mt-5 mb-5 position-relative">
           <h2 class="text-uppercase text-info">Planifier une Démonstration</h2>
@@ -114,7 +114,7 @@
             </p>
           </div>
         </div>
-        <form class="row g-5">
+        <form class="row g-5" id="resreve-demo">
           <div class="col-md-12">
             <label for="nomprenom" class="form-label"
               >Nom et Prénom <span class="text-danger">*</span></label
@@ -198,7 +198,7 @@
             ></textarea>
           </div>
           <div class="d-grid">
-            <button class="btn btn-primary" type="button">
+            <button class="btn btn-primary" type="submit">
               Réserver maintenant
             </button>
           </div>
@@ -207,7 +207,7 @@
     </div>
     <!-- footer  -->
     <div
-      class="footer pt-5 pb-5 text-white-50 text-center text-md-start"
+      class="footer pt-5 pb-5 text-white-50 bg-dark text-center text-md-start"
       id="about"
     >
       <div class="container">
@@ -215,10 +215,10 @@
           <div class="col-md-6 col-lg-4">
             <div class="info mb-5">
               <img
-                src="images/Capture d’écran 2024-04-04 184346.png"
-                alt=""
-                class="mb-4 img-fluid w-50"
-              />
+              src="images/logo png.png"
+              alt=""
+              class=" w-50 h-50"
+            />
               <p class="mb-5">
                 Pellentesque in ipsum id orci porta dapibus. Vivamus magna
                 justo, lacinia eget consectetur sed, convallis at tellus.
@@ -253,7 +253,7 @@
                 <li>Contact Us</li>
               </ul>
             </div>
-            <h2 class="custom-h2 text-info" style="margin-top: 182px">
+            <h2 class="custom-h2 text-light text-uppercase" style="margin-top: 182px">
               Location <i class="fa-solid fa-map-pin"></i>
             </h2>
           </div>
@@ -332,19 +332,11 @@
       </div>
     </div>
     <p
-      class="copyright bg-pink-200 text-info fw-bold d-flex justify-content-center align-items-center mb-0 p-3"
+      class="copyright bg-dark bg-gradient text-info d-flex justify-content-center align-items-center mb-0 p-3"
     >
       © 2024 LilianaDev. All rights reserved
     </p>
     <script>
-      var nav = document.querySelector("nav");
-      window.addEventListener("scroll", function () {
-        if (window.pageYOffset > 100) {
-          nav.classList.add("bg-light", "shadow");
-        } else {
-          nav.classList.remove("bg-light", "shadow");
-        }
-      });
       function scrollToTop() {
         window.scrollTo({
           top: 0,
