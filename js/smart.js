@@ -91,3 +91,28 @@ function animateElementsOnScroll() {
 window.addEventListener("scroll", animateElementsOnScroll);
 // Trigger the animation check once initially in case the section is already in viewport on page load
 animateElementsOnScroll();
+
+
+
+
+  $("#monthly").click(function(){
+          $(this).addClass('active');
+          $("#yearly").removeClass('active')
+
+          $(".monthlyPriceList").removeClass('d-none');
+          $(".monthlyPriceList").addClass('fadeIn');
+          $(".yearlyPriceList").addClass('d-none');
+
+          $(".indicator").css("left","2px");
+  })
+
+  $("#yearly").click(function(){
+          $(this).addClass('active');
+          $("#monthly").removeClass('active');
+
+          $(".yearlyPriceList").removeClass('d-none');
+          $(".yearlyPriceList").addClass('fadeIn');
+          $(".monthlyPriceList").addClass('d-none');
+
+          $(".indicator").css("left","163px");
+  })
