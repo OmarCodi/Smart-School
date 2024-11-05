@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Bootstrap 5.3-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!--CSS jquery Datatable-->
+    <link rel="stylesheet" href="CSS/jquery.dataTables.css">
+
+
+    <!-- JS Bootstrap 5.3-->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <!-- JS jquery-->
+    <script src="JS/jquery-3.7.1.js"></script>
+    <!-- JS jquery dataTables-->
+    <script src="JS/jquery.dataTables.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-danger text-center p-3">La Liste Des Etudiants</h2>
+        <p class="p-3 text-end">
+            <button class='btn  btn-primary' data-bs-toggle='modal' data-bs-target='#viewModal' >Nouveau Etudiant</button>
+        </p>
+        
+        <div class="table-reponsive">
+                <table id="ListeEtd" class="table table-dark table-bordered p-3">
+                    <thead>
+                        <tr>                            
+                            <th>Numero</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Téléphone</th>
+                            <th>E-mail</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>                            
+                            <th>Numero</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Téléphone</th>
+                            <th>E-mail</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                </table>
+        </div>
+    </div>
+        <!-- Modal  -->
+        <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Nouveau Compte</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!--Etape 2 Remplir le formulaire -->
+                  <form>
+                    <div class="mb-3">
+                        <label for="numero" class="col-form-label">Numéro Etudiant :</label>
+                        <input type="text" class="form-control" id="num" readonly>
+                      </div>
+                    <div class="mb-3">
+                      <label for="nom" class="col-form-label">Nom Etudiant :</label>
+                      <input type="text" class="form-control" id="nom">
+                    </div>
+                    <div class="mb-3">
+                      <label for="nom" class="col-form-label">Prénom Etudiant :</label>
+                      <input type="text" class="form-control" id="prenom">
+                    </div>
+                    <div class="mb-3">
+                      <label for="nom" class="col-form-label">Téléphone Etudiant :</label>
+                      <input type="text" class="form-control" id="telephone">
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="col-form-label">Email Etudiant :</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <!--Etape 3 clicker sur valider -->
+                  <button type="button" id="Btn_Valider" class="btn btn-primary">Valider</button>
+                  <!--Etape 3 clicker sur valider -->
+                  <button  type="button" id="Btn_Update"  class="btn btn-success" >Update</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    <!-- Controlleur -->
+    <script>
+        $(document).ready(function(){
+                            // DataTable
+                var etudiantDataTable = $('#ListeEtd').DataTable({
+                    'processing': true,
+                    'ajax': {
+                        'url':'Listedata.php'
+                    },
+                    'columns': [
+                        { data: 'Num_etd' },
+                        { data: 'Nom' },
+                        { data: 'Prenom' },
+                        { data: 'Telephone' },
+                        { data: 'Email' },
+                        { data: 'action' },
+                    ]
+                });
+
+                // Delete
+                $('#ListeEtd').on('click','.deleteUser',function(){
+
+                    var id = $(this).data('id');
+                    var deleteConfirm = confirm("voulez vous vraiment supprimer cet Etudiant ?");
+                    if(deleteConfirm == true)
+                    {
+                        $.ajax({
+                            url: 'Listedata.php',
+                            type: 'post',
+                            data: {request: 2, id: id},
+                            success: function(response){
+                                    if(response == 1){
+                                        alert("Utilisateur supprimé avec succés.");                            
+                                         // Recharger DataTable
+                                         etudiantDataTable.ajax.reload();
+                                    }
+                                    else{
+                                        alert("Id invalide.");
+                                    }
+                            }
+
+                        })
+                    }
+
+
+                });
+                // Afficher un Etudiant 
+                $('#ListeEtd').on('click','.viewUser',function(){
+                    // récuperer ID Etudiant a afficher
+                    var id = $(this).data('id');
+                    $('#Btn_Valider').hide();
+                    $('#Btn_Update').hide();
+                    $('#num').prop("readonly",true);
+                    $('#nom').prop("readonly",true);
+                    $('#prenom').prop("readonly",true);
+                    $('#email').prop("readonly",true);
+                    $('#telephone').prop("readonly",true);
+
+                    
+                    $.ajax({
+                        url: 'Listedata.php',
+                        type: 'post',
+                        data: {request: 3, id: id},
+                        dataType:'json',
+                        success: function(response){
+                                if(response.status == 1){
+                                    $('#num').val(response.data.Num_etd);
+                                    $('#nom').val(response.data.Nom);
+                                    $('#prenom').val(response.data.Prenom);
+                                    $('#telephone').val(response.data.Telephone);
+                                    $('#email').val(response.data.Email);
+                                 
+                                }
+                                else{
+                                    alert("Id Invalid");
+                                   
+                                }
+                        }
+
+                    })
+
+                });
+
+                // Ajouter Etudiant
+                $('#Btn_Valider').on('click',function()
+                {
+                    
+                   
+                    var nom =$('#nom').val().trim();
+                    var prenom =$('#prenom').val().trim();
+                    var telephone =$('#telephone').val().trim();
+                    var email =$('#email').val().trim();
+                    $.ajax({
+                        url: 'Listedata.php',
+                        type: 'post',
+                        data: {request: 4, nom: nom,prenom:prenom,telephone:telephone,email:email},
+                        dataType:'json',
+                        success: function(response){
+                                if(response.status == 1){
+                                    alert(response.message);
+                                     // Fermer modal
+                                $('#viewModal').modal('toggle');
+                                    
+                                // Recharger DataTable
+                                etudiantDataTable.ajax.reload();                               
+                                 
+                                }
+                                else{
+                                 
+                                    alert(response.message);
+                                }
+                        }
+                    })
+
+
+
+                });
+
+                // Afficher enregistremnt update
+                
+                $('#ListeEtd').on('click','.updateUser',function(){
+                    // récuperer ID Etudiant a afficher
+                    var id = $(this).data('id');
+                    $('#Btn_Valider').hide();
+                    $('#Btn_update').show();           
+                    $.ajax({
+                        url: 'Listedata.php',
+                        type: 'post',
+                        data: {request: 3, id: id},
+                        dataType:'json',
+                        success: function(response){
+                                if(response.status == 1){
+                                    $('#num').val(response.data.Num_etd);
+                                    $('#nom').val(response.data.Nom);
+                                    $('#prenom').val(response.data.Prenom);
+                                    $('#telephone').val(response.data.Telephone);
+                                    $('#email').val(response.data.Email);
+                                 
+                                }
+                                else{
+                                    alert("Id Invalid");
+                                   
+                                }
+                        }
+
+                    })
+
+                });
+
+                
+
+
+
+
+
+
+        
+                // update Enregistrement
+                $('#Btn_Update').on('click',function(){
+                    // récuperer data
+                    var id = $('#num').val();              
+                    var nom =$('#nom').val().trim();
+                    var prenom =$('#prenom').val().trim();
+                    var telephone =$('#telephone').val().trim();
+                    var email =$('#email').val().trim();
+                    $.ajax({
+                        url: 'Listedata.php',
+                        type: 'post',
+                        data: {request: 5, id: id, nom: nom,prenom:prenom,telephone:telephone,email:email},
+                        dataType:'json',
+                        success: function(response){
+                                if(response.status == 1){
+                                    alert(response.message);
+                                     // Fermer modal
+                                $('#viewModal').modal('toggle');
+                                    
+                                // Recharger DataTable
+                                etudiantDataTable.ajax.reload();
+
+                               
+                                 
+                                }
+                                else{
+                                 
+                                    alert(response.message);
+                                }
+                        }
+                    })
+
+
+                });
+            
+            });
+    </script>
+
+
+</body>
+</html>
